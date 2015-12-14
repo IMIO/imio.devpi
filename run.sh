@@ -7,7 +7,7 @@ if [ ! -f "$DEVPI_SERVERDIR/.serverversion" ]; then
     initialize=no
 fi
 
-/srv/devpi/bin/devpi-server --start --host 0.0.0.0 --port 3141 --outside-url http://${HOSTNAME}:3141
+/srv/devpi/bin/devpi-server --start --host 0.0.0.0 --port 3141 --outside-url http://${HOSTNAME}
 
 if [[ "$initialize" = "no" ]]; then
   /srv/devpi/bin/devpi use http://localhost:3141
