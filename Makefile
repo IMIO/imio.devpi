@@ -1,9 +1,10 @@
 
-docker-image:
-	rm -rf devpi
+docker-compose-image:
 	mkdir devpi
-	docker-compose rm devpi
-	docker-compose build
+	docker-compose -p devpi build
+
+docker-image:
+	docker build --no-cache=true -t devpi:latest .
 
 go-in:
 	docker-compose run --rm --service-ports devpi bash
