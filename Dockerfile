@@ -1,6 +1,6 @@
 FROM docker-staging.imio.be/base
 RUN apt-get update -q && apt-get install -y netbase python python-pip python-virtualenv
-RUN useradd -u 1000 -d /srv/devpi devpi
+RUN useradd -u 1100 -d /srv/devpi devpi
 ADD run.sh /srv/devpi/run.sh
 RUN mkdir -p /srv/devpi/devpi
 RUN chown devpi:devpi -R /srv/devpi/ && chmod +x /srv/devpi/run.sh
