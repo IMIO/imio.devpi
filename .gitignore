@@ -1,1 +1,8 @@
 devpi/
+bin/
+include/
+lib/
+local/
+move.py
+packages/
+
