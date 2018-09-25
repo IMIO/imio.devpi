@@ -12,3 +12,7 @@ go-in:
 cleanall:
 	rm -rf devpi
 	docker-compose rm devpi
+
+update-prod-image:
+	docker build -t docker-prod.imio.be/devpi:latest .
+	docker push docker-prod.imio.be/devpi:latest
