@@ -1,10 +1,10 @@
 devpi:
     build: .
     environment:
-        - HOSTNAME=localhost
+        - HOSTNAME=localhost:3141
         - DEVPI_PASSWORD=''
-        - DEVPI_CLIENTDIR=/tmp/devpi-client
-        - DEVPI_SERVERDIR=/srv/devpi/devpi
+        - DEVPICLIENT_CLIENTDIR=/tmp/devpi-client
+        - DEVPISERVER_SERVERDIR=/srv/devpi/devpi
     volumes:
         - ./devpi:/srv/devpi/devpi
     ports:

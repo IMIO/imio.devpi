@@ -4,9 +4,7 @@ RUN useradd -u 1100 -d /srv/devpi devpi
 ADD run.sh /srv/devpi/run.sh
 RUN mkdir -p /srv/devpi/devpi
 RUN chown devpi:devpi -R /srv/devpi/ && chmod +x /srv/devpi/run.sh
-ENV DEVPI_SERVERDIR /srv/devpi/devpi
 ENV DEVPISERVER_SERVERDIR /srv/devpi/devpi
-ENV DEVPI_CLIENTDIR /tmp/devpi-client
 ENV DEVPICLIENT_CLIENTDIR /tmp/devpi-client
 USER devpi
 WORKDIR /srv/devpi
