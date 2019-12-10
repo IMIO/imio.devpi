@@ -4,7 +4,7 @@ devpi:
 	sudo chown 1100:1100 devpi
 
 docker-image:
-	docker build --no-cache=true -t devpi:latest .
+	docker build --pull --no-cache -t devpi:latest .
 
 go-in:
 	docker-compose run --rm --service-ports devpi bash
