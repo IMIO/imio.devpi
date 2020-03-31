@@ -1,4 +1,4 @@
-FROM docker-staging.imio.be/base
+FROM ubuntu:18.04
 RUN apt-get update -q && apt-get install -y netbase python3 python3-pip python3-dev python3-venv libssl-dev libffi-dev libxml2-dev libxslt1-dev zlib1g-dev
 RUN useradd -u 1100 -d /srv/devpi devpi
 ADD run.sh /srv/devpi/run.sh

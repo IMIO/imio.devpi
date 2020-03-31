@@ -24,6 +24,6 @@ build:
 	docker-compose build
 
 rsync:
-	chown 1000:1000 -R devpi
+	sudo chown 1000:1000 -R devpi
 	rsync -rP devpi:/srv/devpi/ devpi
-	chown 1100:1100 -R devpi
+	sudo chown 1100:1100 -R devpi
