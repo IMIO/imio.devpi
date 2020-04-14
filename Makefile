@@ -14,7 +14,7 @@ cleanall:
 	docker-compose down
 
 update-prod-image:
-	docker build -t docker-prod.imio.be/devpi:latest .
+	docker build --pull -t docker-prod.imio.be/devpi:latest .
 	docker push docker-prod.imio.be/devpi:latest
 
 up: devpi
