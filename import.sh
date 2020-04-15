@@ -1,2 +1,2 @@
 #!/usr/bin/env bash
-./bin/devpi-server --import export
+./bin/devpi-import devpi/export

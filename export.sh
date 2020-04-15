@@ -1,3 +1,3 @@
 #!/usr/bin/env bash
-mkdir -p export
-./bin/devpi-server --export export
+mkdir -p devpi/export
+./bin/devpi-export devpi/export

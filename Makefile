@@ -1,6 +1,6 @@
 
 devpi:
-	mkdir devpi
+	mkdir -p devpi
 	sudo chown 1100:1100 devpi
 
 docker-image:
@@ -24,6 +24,7 @@ build:
 	docker-compose build
 
 rsync:
+	mkdir -p devpi/export
 	sudo chown 1000:1000 -R devpi
-	rsync -rP devpi:/srv/devpi/ devpi
+	rsync -rP devpi:/srv/devpi/export/ devpi/export/
 	sudo chown 1100:1100 -R devpi
