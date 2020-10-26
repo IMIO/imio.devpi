@@ -12,7 +12,7 @@ USER devpi
 WORKDIR /srv/devpi
 RUN python3 -m venv . \
   && bin/pip install --upgrade pip \
-  && bin/pip install "devpi-server==5.4.1" "devpi-client==5.1.1" "devpi-web==4.0.2" "requests" "devpi-findlinks==2.0.1"
+  && bin/pip install "devpi-server==5.5.0" "devpi-client==5.2.1" "devpi-web==4.0.5" "requests" "devpi-findlinks==2.0.1"
 
 VOLUME ["/srv/devpi/devpi"]
 
